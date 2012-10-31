@@ -46,7 +46,7 @@
             
             ^NSAttributedString*(NSAttributedString* str, NSTextCheckingResult* match) {
                 NSString* colorName = [str attributedSubstringFromRange:[match rangeAtIndex:2]].string;
-                UIColor* color = UIColorFromString(colorName);
+                UIColor* color = OHUIColorFromString(colorName);
                 NSRange textRange = [match rangeAtIndex:3];
                 NSMutableAttributedString* foundString = [[str attributedSubstringFromRange:textRange] mutableCopy];
                 if (textRange.length>0) [foundString setTextColor:color];
